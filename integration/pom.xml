@@ -13,12 +13,7 @@
     <dependencies>
 
 
-        <dependency>
-            <groupId>com.example</groupId>
-            <artifactId>domain</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
@@ -40,6 +35,9 @@
             <artifactId>mail</artifactId>
             <version>1.4</version>
         </dependency>
+
+
+
     </dependencies>
 
 

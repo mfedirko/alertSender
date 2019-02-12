@@ -1,18 +1,34 @@
 package alertsender;
 
+//import EmailService;
+//import TemplateHelper;
+//import model.AlertSource;
+//import model.entity.api.AlertDetail;
+//import model.entity.api.AlertNotification;
+//import model.entity.DefaultEmail;
+//import model.entity.api.Email;
+//import model.TemplateConstant;
+//import com.example.service.email.service.EmailService;
+//import com.example.service.email.util.TemplateHelper;
+//import model.TemplateConstant;
 import com.example.service.email.service.EmailService;
 import com.example.service.email.util.TemplateHelper;
-import model.entity.AlertNotification;
-import model.entity.DefaultEmail;
-import model.Email;
 import model.TemplateConstant;
+import model.entity.DefaultEmail;
+import model.entity.api.AlertNotification;
+import model.entity.api.Email;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.batch.item.ItemProcessor;
 
+import javax.transaction.Transactional;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
 public class EmailNotificationProcessor implements ItemProcessor<AlertNotification,AlertNotification> {
+
+    private Logger logger = LoggerFactory.getLogger(EmailNotificationProcessor.class);
 
     private String REPLY_TO;
     private String FROM;
@@ -74,11 +90,13 @@ public class EmailNotificationProcessor implements ItemProcessor<AlertNotificati
 
     }
 
+    @Transactional
     private String buildEmailFromTemplate(AlertNotification alertNotification) {
         Map<String,Object> templateParams = new HashMap<>();
         templateParams.put("alerts",alertNotification.getAlerts());
-        templateParams.put("receivedTime", new Date());
+        templateParams.put("sendTS", new Date());
         String emailBody = templateHelper.createBodyFromTemplate(TemplateConstant.ALERT_NOTIFICATION, templateParams);
+        logger.debug(emailBody);
         return emailBody;
     }
 

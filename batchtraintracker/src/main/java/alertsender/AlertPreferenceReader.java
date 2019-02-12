@@ -1,27 +1,29 @@
 package alertsender;
 
-import dao.CtaAlertPreferenceDAO;
-import model.entity.CtaAlertPreference;
+import dao.AlertPreferenceDAO;
+import model.entity.api.AlertPreference;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.NonTransientResourceException;
 import org.springframework.batch.item.ParseException;
 import org.springframework.batch.item.UnexpectedInputException;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Iterator;
 
-public class AlertPreferenceReader implements ItemReader<CtaAlertPreference> {
-    public AlertPreferenceReader(CtaAlertPreferenceDAO ctaAlertPreferenceDAO){
+//import model.entity.api.AlertPreference;
+//import model.entity.cta.customeralerts.CtaAlertPreference;
+
+public class AlertPreferenceReader implements ItemReader<AlertPreference> {
+    public AlertPreferenceReader(AlertPreferenceDAO ctaAlertPreferenceDAO){
         this.ctaAlertPreferenceDAO = ctaAlertPreferenceDAO;
     }
 
-    private CtaAlertPreferenceDAO ctaAlertPreferenceDAO;
+    private AlertPreferenceDAO ctaAlertPreferenceDAO;
 
-    private Iterable<CtaAlertPreference> allPreferences;
-    private Iterator<CtaAlertPreference> preferenceIterator;
+    private Iterable<AlertPreference> allPreferences;
+    private Iterator<AlertPreference> preferenceIterator;
 
     @Override
-    public CtaAlertPreference read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
+    public AlertPreference read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
         if (allPreferences == null) {
             allPreferences =ctaAlertPreferenceDAO.findAll();
             preferenceIterator = allPreferences.iterator();

@@ -5,9 +5,32 @@
     </head>
     <body>
 
-        <span th:text="${jobName}"/> has failed for <span th:text="${failedTimestamp}"/>. Please take necessary action.<br>
+        Please find below your alerts for <span th:text="${sendTS}"/>.<br><br>
+
+        <div style="overflow-x:auto;">
+            <table >
+                <thead>
+                <th>Description</th>
+                <th>Source URL</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Alert Source</th>
+                </thead>
+                <tbody>
+                <tr th:each="alrt: ${alerts}">
+                    <td th:text="${alrt.description}">Description</td>
+                    <td th:text="${alrt.url}">URL</td>
+                    <td th:text="${alrt.startTime}">Start Time</td>
+                    <td th:text="${alrt.endTime}">End Time</td>
+                    <td th:text="${alrt.alertSource}">Alert Source</td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
         <br><br>
-        To unsubscribe, please use this <a th:href="${unsubscribeURL}">link</a>.<br><br>
-        Regards,<br><span th:text="${senderName}"/>
+        These alerts are sent based on your <a href="http://www.google.com">alert preferences</a>.<br><br>
+        <span th:if="${senderName}">Regards,<br><span th:text="${senderName}"/></span>
     </body>
 </html>
