@@ -68,7 +68,10 @@ public class CustomerAlertsResponseDeserializer extends JsonDeserializer<Custome
                 boolean isTBD = TBDint > 0;
                 String alertURL = alertNode.get("AlertURL").get("#cdata-section").asText();
 
-                String impactedService = alertNode.get("ImpactedService").get("Service").get("ServiceId").asText();
+                String impactedService = null;
+                if (alertNode.get("ImpactedService") != null && alertNode.get("ImpactedService").get("Service") != null ) {
+                    impactedService = alertNode.get("ImpactedService").get("Service").get("ServiceId").asText();
+                }
 
 
                 CTAAlert CTAAlert = new CTAAlert(id, headline, shortDesc, fullDesc, severity, eventStart, eventEnd, isTBD, isMajorAlert, alertURL, impactedService);
