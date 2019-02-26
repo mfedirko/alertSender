@@ -1,4 +1,4 @@
-package model.cta.customeralerts;
+package integration.cta.traintracker.client.response;
 
 
 import com.fasterxml.jackson.core.JsonParser;
@@ -6,7 +6,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
-import model.Direction;
+import model.constant.Direction;
 import model.entity.cta.customeralerts.CtaTrainRoute;
 import org.apache.commons.lang3.tuple.Pair;
 

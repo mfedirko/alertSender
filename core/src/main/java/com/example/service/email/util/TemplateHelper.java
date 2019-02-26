@@ -1,6 +1,6 @@
 package com.example.service.email.util;
 
-import model.TemplateConstant;
+import model.constant.TemplateConstant;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.thymeleaf.ITemplateEngine;

@@ -1,10 +1,10 @@
 package integration.cta.traintracker.client;
 
 
-//import model.cta.customeralerts.CTAAlert;
-//import model.cta.customeralerts.CustomerAlertsResponse;
-import model.cta.customeralerts.CTAAlert;
-import model.cta.customeralerts.CustomerAlertsResponse;
+//import model.entity.cta.customeralerts.CTAAlert;
+//import integration.cta.traintracker.client.response.CustomerAlertsResponse;
+import model.entity.cta.customeralerts.CTAAlert;
+import integration.cta.traintracker.client.response.CustomerAlertsResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 

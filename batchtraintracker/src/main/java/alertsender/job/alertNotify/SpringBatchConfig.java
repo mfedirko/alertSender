@@ -3,7 +3,7 @@ package alertsender.job.alertNotify;
 //import dao.config.TrainTrackerJpaConfiguration;
 //import dao.config.TrainTrackerJpaConfiguration;
 //import dao.config.TrainTrackerJpaConfiguration;
-import dao.config.TrainTrackerJpaConfiguration;
+import dao.config.JpaConfiguration;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.launch.JobLauncher;
 import org.springframework.batch.core.launch.support.SimpleJobLauncher;
@@ -23,7 +23,7 @@ import javax.sql.DataSource;
 import java.net.MalformedURLException;
 
 @Configuration
-@Import(TrainTrackerJpaConfiguration.class)
+@Import(JpaConfiguration.class)
 @EnableBatchProcessing
 public class SpringBatchConfig {
 

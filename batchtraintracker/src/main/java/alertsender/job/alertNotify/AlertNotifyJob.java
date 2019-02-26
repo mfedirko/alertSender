@@ -1,6 +1,6 @@
 package alertsender.job.alertNotify;
 
-//import model.cta.customeralerts.CtaStopResponse;
+//import integration.cta.traintracker.client.response.CtaStopResponse;
 //import model.entity.api.AlertNotification;
 //import model.entity.api.AlertPreference;
 //import model.entity.cta.customeralerts.CtaAlertPreference;

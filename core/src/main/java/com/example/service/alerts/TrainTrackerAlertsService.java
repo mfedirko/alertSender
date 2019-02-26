@@ -2,7 +2,7 @@ package com.example.service.alerts;
 
 
 
-import model.cta.customeralerts.CTAAlert;
+import model.entity.cta.customeralerts.CTAAlert;
 import model.entity.cta.customeralerts.CtaStop;
 
 import java.util.List;

@@ -4,11 +4,11 @@
 ////import dao.AlertDAO;
 ////import dao.AlertDAO;
 ////import integration.cta.traintracker.client.CustomerAlertsClient;
-////import model.cta.customeralerts.CTAAlert;
+////import model.entity.cta.customeralerts.CTAAlert;
 ////import model.entity.api.AlertDetail;
 //import dao.AlertDAO;
 //import integration.cta.traintracker.client.CustomerAlertsClient;
-//import model.cta.customeralerts.CTAAlert;
+//import model.entity.cta.customeralerts.CTAAlert;
 //import model.entity.api.AlertDetail;
 //import org.junit.Test;
 //import org.junit.runner.RunWith;

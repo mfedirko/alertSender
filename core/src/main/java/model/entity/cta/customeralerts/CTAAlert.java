@@ -1,4 +1,4 @@
-package model.cta.customeralerts;
+package model.entity.cta.customeralerts;
 
 import model.entity.api.Alert;
 import org.apache.commons.lang3.tuple.Pair;

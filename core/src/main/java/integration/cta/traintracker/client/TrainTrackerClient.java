@@ -2,7 +2,7 @@ package integration.cta.traintracker.client;
 
 
 
-import model.cta.customeralerts.TrainTrackerArrivalResponse;
+import integration.cta.traintracker.client.response.TrainTrackerArrivalResponse;
 import model.entity.TrainTrackerArrival;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;

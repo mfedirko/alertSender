@@ -1,6 +1,6 @@
 package model.entity.api;
 
-import model.AlertSource;
+import model.constant.AlertSource;
 
 import javax.persistence.*;
 import java.util.Date;

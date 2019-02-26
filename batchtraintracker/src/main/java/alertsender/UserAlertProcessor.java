@@ -2,14 +2,14 @@ package alertsender;
 
 //import dao.AlertDAO;
 //import integration.cta.traintracker.client.TrainTrackerClient;
-//import model.AlertSource;
-//import model.cta.customeralerts.CTAAlert;
+//import model.constant.AlertSource;
+//import model.entity.cta.customeralerts.CTAAlert;
 
 import dao.AlertDAO;
 import integration.cta.traintracker.client.CustomerAlertsClient;
 import integration.cta.traintracker.client.TrainTrackerClient;
-import model.AlertSource;
-import model.cta.customeralerts.CTAAlert;
+import model.constant.AlertSource;
+import model.entity.cta.customeralerts.CTAAlert;
 import model.entity.TrainTrackerArrival;
 import model.entity.api.Alert;
 import model.entity.api.AlertDetail;

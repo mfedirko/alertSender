@@ -1,8 +1,8 @@
 package alertsender;
 
 //import model.entity.cta.customeralerts.CtaStop;
-//import model.cta.customeralerts.CtaStopResponse;
-import model.cta.customeralerts.CtaStopResponse;
+//import integration.cta.traintracker.client.response.CtaStopResponse;
+import integration.cta.traintracker.client.response.CtaStopResponse;
 import model.entity.cta.customeralerts.CtaStop;
 import org.springframework.batch.item.ItemProcessor;
 

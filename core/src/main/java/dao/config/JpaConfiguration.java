@@ -22,7 +22,7 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 @Import(DatasourceConfig.class)
-public class TrainTrackerJpaConfiguration {
+public class JpaConfiguration {
 
 
     @Value("${hbprop.hibernate.show_sql}") String showSql;

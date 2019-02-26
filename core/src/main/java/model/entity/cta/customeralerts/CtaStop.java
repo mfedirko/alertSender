@@ -1,7 +1,7 @@
 package model.entity.cta.customeralerts;
 
 
-import model.Direction;
+import model.constant.Direction;
 import model.entity.api.Stop;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;

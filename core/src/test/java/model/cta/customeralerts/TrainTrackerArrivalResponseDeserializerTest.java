@@ -3,6 +3,8 @@ package model.cta.customeralerts;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import integration.cta.traintracker.client.response.TrainTrackerArrivalResponse;
+import integration.cta.traintracker.client.response.TrainTrackerArrivalResponseDeserializer;
 import model.entity.TrainTrackerArrival;
 import org.junit.Before;
 import org.junit.Test;

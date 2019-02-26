@@ -2,7 +2,7 @@ package alertsender.job.updateRefData;
 
 import alertsender.CtaStopRESTReader;
 import alertsender.CtaStopResponseProcessor;
-import model.cta.customeralerts.CtaStopResponse;
+import integration.cta.traintracker.client.response.CtaStopResponse;
 import model.entity.cta.customeralerts.CtaStop;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;

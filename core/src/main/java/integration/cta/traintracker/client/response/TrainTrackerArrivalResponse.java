@@ -1,4 +1,4 @@
-package model.cta.customeralerts;
+package integration.cta.traintracker.client.response;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import model.entity.TrainTrackerArrival;

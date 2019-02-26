@@ -9,7 +9,7 @@ package alertsender.job.alertNotify;
 //import EmailClient;
 //import EmailSenderImpl;
 //import EmailSenderConfig;
-//import model.TemplateConstant;
+//import model.constant.TemplateConstant;
 //import model.entity.api.AlertNotification;
 
 import alertsender.AlertNotificationReader;
@@ -21,7 +21,7 @@ import dao.AlertNotificationDAO;
 import integration.email.EmailClient;
 import integration.email.EmailSenderImpl;
 import integration.email.config.EmailSenderConfig;
-import model.TemplateConstant;
+import model.constant.TemplateConstant;
 import model.entity.api.AlertNotification;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
