@@ -71,7 +71,8 @@ public class CustomerAlertsResponseDeserializer extends JsonDeserializer<Custome
 
                 String impactedService = null;
                 if (alertNode.get("ImpactedService") != null && alertNode.get("ImpactedService").get("Service") != null ) {
-                    impactedService = alertNode.get("ImpactedService").get("Service").get("ServiceId").asText();
+                    JsonNode impactedServiceIdNode =  alertNode.get("ImpactedService").get("Service").get("ServiceId");
+                    if (impactedServiceIdNode != null ) impactedService = impactedServiceIdNode.asText();
                 }
 
 
