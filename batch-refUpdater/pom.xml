@@ -10,6 +10,86 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>batch-refUpdater</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>batch-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <!-- ... -->
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>batch.ReferenceDataUpdateRunner</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                        <configuration>
+                            <classifier>spring-boot</classifier>
+                            <mainClass>batch.ReferenceDataUpdateRunner</mainClass>
+                            <includes>
+                                <dependency>
+                                    <groupId>com.example</groupId>
+                                    <artifactId>core</artifactId>
+                                </dependency>
+                                <dependency>
+                                    <groupId>com.example</groupId>
+                                    <artifactId>batch-common</artifactId>
+                                </dependency>
+                            </includes>
+                            <requiresUnpack>
+                                <dependency>
+                                    <groupId>com.example</groupId>
+                                    <artifactId>core</artifactId>
+                                    <version>0.0.1-SNAPSHOT</version>
+                                </dependency>
+                            </requiresUnpack>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
 
 </project>
