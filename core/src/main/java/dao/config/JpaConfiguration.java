@@ -38,14 +38,14 @@ public class JpaConfiguration {
 //        return ftry;
 //    }
 
-    @Bean
-    public PlatformTransactionManager transactionManager(DataSource dataSource){
-        JpaTransactionManager transactionManager
-                = new JpaTransactionManager();
-        transactionManager.setEntityManagerFactory(
-                entityManagerFactory(dataSource));
-        return transactionManager;
-    }
+//    @Bean
+//    public PlatformTransactionManager jpaTransactionManager(DataSource dataSource){
+//        JpaTransactionManager transactionManager
+//                = new JpaTransactionManager();
+//        transactionManager.setEntityManagerFactory(
+//                entityManagerFactory(dataSource));
+//        return transactionManager;
+//    }
 
     @Bean
     public EntityManagerFactory entityManagerFactory(DataSource dataSource){
